@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bxejqj5p5y4i1"]
+[gd_scene load_steps=3 format=3 uid="uid://bxejqj5p5y4i1"]
 
 [ext_resource type="Script" path="res://main_menu.gd" id="1_vg7pp"]
+[ext_resource type="Texture2D" uid="uid://cf4dvc0r0bw53" path="res://the_factory.png" id="2_n5gdu"]
 
 [node name="main_menu" type="Control"]
 layout_mode = 3
@@ -18,19 +19,19 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.593134, 0.593134, 0.593134, 1)
+color = Color(0.286163, 0.224863, 0.483342, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.117
-anchor_top = 0.105
-anchor_right = 0.521
-anchor_bottom = 0.875
-offset_left = 0.215988
-offset_top = -0.0400009
-offset_right = -0.192017
-offset_bottom = -6.10352e-05
+anchor_left = 0.049
+anchor_top = 0.438
+anchor_right = 0.453
+anchor_bottom = 0.594
+offset_left = 0.551998
+offset_top = 0.175995
+offset_right = 0.143982
+offset_bottom = 0.0879822
 
 [node name="play_button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -43,6 +44,11 @@ text = "CUSTOMIZATION!!!"
 [node name="quit_button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "DAMNATION!!!"
+
+[node name="TheFactory" type="Sprite2D" parent="."]
+position = Vector2(821, 309)
+scale = Vector2(2, 2)
+texture = ExtResource("2_n5gdu")
 
 [connection signal="pressed" from="VBoxContainer/play_button" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/settings_button" to="." method="_on_settings_button_pressed"]
