@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bxejqj5p5y4i1"]
+[gd_scene load_steps=4 format=3 uid="uid://bxejqj5p5y4i1"]
 
 [ext_resource type="Script" path="res://main_menu.gd" id="1_vg7pp"]
 [ext_resource type="Texture2D" uid="uid://vgj6bdc7p2rv" path="res://The_Plant.png" id="2_68tng"]
+[ext_resource type="Texture2D" uid="uid://qcc20iqr5up7" path="res://aguypic.png" id="3_rntic"]
 
 [node name="main_menu" type="Control"]
 layout_mode = 3
@@ -40,6 +41,11 @@ text = "CUSTOMIZATION!!!"
 [node name="quit_button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "DAMNATION!!!"
+
+[node name="Aguypic" type="Sprite2D" parent="."]
+position = Vector2(876, 419)
+scale = Vector2(0.005, 0.005)
+texture = ExtResource("3_rntic")
 
 [connection signal="pressed" from="VBoxContainer/play_button" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/settings_button" to="." method="_on_settings_button_pressed"]
