@@ -19,6 +19,10 @@ config/icon="res://logo.png"
 
 window/stretch/mode="canvas_items"
 
+[dotnet]
+
+project/assembly_name="overcooked- the budget cut"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
