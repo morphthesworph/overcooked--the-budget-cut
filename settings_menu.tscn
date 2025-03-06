@@ -1,9 +1,41 @@
-[gd_scene format=3 uid="uid://78463n3lanhe"]
+[gd_scene load_steps=2 format=3 uid="uid://78463n3lanhe"]
+
+[ext_resource type="Script" path="res://settings_menu.gd" id="1_ctsk8"]
 
 [node name="settings_menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 2.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ctsk8")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 205.0
+offset_top = 106.0
+offset_right = 852.0
+offset_bottom = 191.0
+text = "Video"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 203.0
+offset_top = 217.0
+offset_right = 850.0
+offset_bottom = 302.0
+text = "Audio"
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 210.0
+offset_top = 331.0
+offset_right = 857.0
+offset_bottom = 416.0
+text = "Controls
+"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
