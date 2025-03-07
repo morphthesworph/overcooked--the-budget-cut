@@ -11,9 +11,37 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_oxrcn")
 
-[node name="OptionButton" type="OptionButton" parent="."]
+[node name="ResDropdown" type="OptionButton" parent="."]
 layout_mode = 0
-offset_left = 190.0
-offset_top = 139.0
-offset_right = 983.0
-offset_bottom = 231.0
+offset_left = 170.0
+offset_top = 51.0
+offset_right = 963.0
+offset_bottom = 143.0
+item_count = 2
+popup/item_0/text = "1920x1080"
+popup/item_1/text = "1600x900"
+popup/item_1/id = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 920.0
+offset_top = 570.0
+offset_right = 1076.0
+offset_bottom = 614.0
+text = "Apply
+"
+
+[node name="FullscreenDropdown" type="OptionButton" parent="."]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 198.0
+offset_right = 844.0
+offset_bottom = 288.0
+item_count = 3
+popup/item_0/text = "Fullscreen"
+popup/item_1/text = "Windowed Fullscreen"
+popup/item_1/id = 1
+popup/item_2/text = "Windowed"
+popup/item_2/id = 2
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

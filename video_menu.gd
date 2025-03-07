@@ -1,15 +1,9 @@
-	extends Control
-
+extends Control
 	
+var resolutions = [
+	Vector2(1920,1080),
+	Vector2(1600,900),
+]
 
-	func additems():
-		$OptionButton.add_item("1920x1080")
-
-	# Called when the node enters the scene tree for the first time.
-	func _ready() -> void:
-		additems()
-
-
-	# Called every frame. 'delta' is the elapsed time since the previous frame.
-	func _process(delta: float) -> void:
-		pass
+func _on_button_pressed() -> void:
+	OS.set_window_size = resolutions[0]
