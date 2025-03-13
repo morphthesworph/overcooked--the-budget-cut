@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://4jaeybwkc24r"]
+
+[ext_resource type="Script" path="res://audio_menu.gd" id="1_yc55g"]
+
+[node name="AudioMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yc55g")
+
+[node name="volume_down_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 65.0
+offset_right = 110.0
+offset_bottom = 96.0
+scale = Vector2(3.47137, 1.79819)
+text = "<"
+
+[node name="volume_up_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 65.0
+offset_right = 290.0
+offset_bottom = 96.0
+scale = Vector2(3.471, 1.789)
+text = ">"
+
+[connection signal="pressed" from="volume_down_button" to="." method="_on_volume_down_button_pressed"]
+[connection signal="pressed" from="volume_up_button" to="." method="_on_volume_up_button_pressed"]

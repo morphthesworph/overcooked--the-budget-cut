@@ -15,27 +15,40 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ctsk8")
 
-[node name="Button" type="Button" parent="."]
+[node name="video_button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 205.0
-offset_top = 106.0
-offset_right = 852.0
-offset_bottom = 191.0
+offset_left = 210.0
+offset_top = 110.0
+offset_right = 857.0
+offset_bottom = 195.0
 text = "Video"
 
-[node name="Button2" type="Button" parent="."]
-offset_left = 203.0
-offset_top = 217.0
-offset_right = 850.0
-offset_bottom = 302.0
+[node name="audio_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 220.0
+offset_right = 857.0
+offset_bottom = 305.0
 text = "Audio"
 
-[node name="Button3" type="Button" parent="."]
+[node name="controls_button" type="Button" parent="."]
+layout_mode = 0
 offset_left = 210.0
-offset_top = 331.0
+offset_top = 330.0
 offset_right = 857.0
-offset_bottom = 416.0
+offset_bottom = 415.0
 text = "Controls
 "
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="back_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 440.0
+offset_right = 857.0
+offset_bottom = 525.0
+text = "Back"
+
+[connection signal="pressed" from="video_button" to="." method="_on_video_button_pressed"]
+[connection signal="pressed" from="audio_button" to="." method="_on_audio_button_pressed"]
+[connection signal="pressed" from="controls_button" to="." method="_on_controls_button_pressed"]
+[connection signal="pressed" from="back_button" to="." method="_on_back_button_pressed"]
